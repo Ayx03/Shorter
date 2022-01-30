@@ -6,7 +6,7 @@
     "short",
     "api"
   ],
-  "repository": "zce/short",
+  "repository": "yesmore/shorty",
   "license": "MIT",
   "author": "song",
   "scripts": {
