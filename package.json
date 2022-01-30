@@ -1,15 +1,14 @@
 {
-  "name": "short",
+  "name": "shorty",
   "version": "0.1.0",
   "description": "A short url service.",
   "keywords": [
     "short",
-    "api",
-    "zce"
+    "api"
   ],
   "repository": "zce/short",
   "license": "MIT",
-  "author": "zce <w@zce.me> (https://zce.me)",
+  "author": "song",
   "scripts": {
     "lint": "ts-standard --fix",
     "develop": "npx vercel dev"
@@ -21,6 +20,7 @@
   },
   "dependencies": {
     "@cloudbase/node-sdk": "2.6.1",
+    "cz-customizable": "^6.3.0",
     "got": "11.8.2",
     "nanoid": "3.1.23",
     "redis": "3.1.2"
@@ -29,5 +29,10 @@
     "@types/redis": "2.8.31",
     "@vercel/node": "1.11.1",
     "ts-standard": "10.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   }
 }

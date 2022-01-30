@@ -1,4 +1,4 @@
-# short
+# shorty
 
 > A short url service.
 
@@ -27,7 +27,7 @@
 Create a new short url.
 
 ```shell
-$ curl https://t.zce.me/create -d "url=https://zce.me" -d "slug=zce"
+$ curl https://t.zce.me/create -d "url=https://yesmore.cc" -d "slug=xxx"
 ```
 
 #### Parameters
@@ -46,4 +46,4 @@ $ curl https://t.zce.me/create -d "url=https://zce.me" -d "slug=zce"
 
 ## License
 
-[MIT](LICENSE) &copy; [zce](https://zce.me)
+[MIT](LICENSE) &copy; [yesmore](https://yesmore.cc)
