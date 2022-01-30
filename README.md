@@ -1,12 +1,12 @@
-# shorty
+# :link: shorty
 
-> A short url service.
+Short chain generator: a serverless service built on vercel
 
 ## Online Services
 
-- https://t.zce.me
+- 
 
-## Getting Started
+## Build on Vercel
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fzce%2Fshort&env=GITHUB_OWNER,GITHUB_REPO,GITHUB_ISSUE_ID,GITHUB_TOKEN&demo-url=https%3A%2F%2Ft.zce.me)
 
@@ -40,7 +40,7 @@ $ curl https://t.zce.me/create -d "url=https://yesmore.cc" -d "slug=xxx"
 ```json
 {
   "slug": "<slug>",
-  "link": "http://t.zce.me/<slug>"
+  "link": "http:///<slug>"
 }
 ```
 
