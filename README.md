@@ -4,7 +4,7 @@ Short chain generator: a serverless service built on vercel
 
 ## Online Services
 
-- 
+- https://shorty-tawny.vercel.app/
 
 ## Build on Vercel
 
@@ -40,7 +40,7 @@ $ curl https://t.zce.me/create -d "url=https://yesmore.cc" -d "slug=xxx"
 ```json
 {
   "slug": "<slug>",
-  "link": "http:///<slug>"
+  "link": "http://https://shorty-tawny.vercel.app/<slug>"
 }
 ```
 
