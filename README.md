@@ -1,10 +1,10 @@
-# :link: shorty
+# :link: Shorty
 
 Short chain generator: a serverless service built on vercel
 
 ## Online Services
 
-- https://shorty-tawny.vercel.app/
+- https://nb.js.cn/
 
 ## Build on Vercel
 
@@ -27,7 +27,7 @@ Short chain generator: a serverless service built on vercel
 Create a new short url.
 
 ```shell
-$ curl https://t.zce.me/create -d "url=https://yesmore.cc" -d "slug=xxx"
+$ curl https:///create -d "url=https://yesmore.cc" -d "slug=xxx"
 ```
 
 #### Parameters
@@ -40,7 +40,7 @@ $ curl https://t.zce.me/create -d "url=https://yesmore.cc" -d "slug=xxx"
 ```json
 {
   "slug": "<slug>",
-  "link": "http://https://shorty-tawny.vercel.app/<slug>"
+  "link": "https://nb.js.cn/<slug>"
 }
 ```
 
