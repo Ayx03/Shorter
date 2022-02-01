@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shorty</title>
+  <title>𝒮𝒽ℴ𝓇𝓉𝓎 - 短链生成器</title>
   <style>
     :root {
-      --color-primary: #5c7cfa;
-      --color-primary-dark: #4263eb;
-      --color-primary-alpha: #5c7cfa50;
+      --color-primary: #ff6262ee;
+      --color-primary-dark: #ff7c7cee;
+      --color-primary-alpha: #ff6262ee;
 
-      --body-color: #495057;
-      --body-bg: #f8f9fa;
+      --body-color: #fafdff;
+      --body-bg: #22272E;
 
       --border-color: #dee2e6;
     }
@@ -47,7 +47,7 @@
       font-size: 5rem;
       font-weight: 300;
       text-align: center;
-      opacity: .2;
+      opacity: .6;
     }
 
     main[x-cloak] {
@@ -68,27 +68,33 @@
       border: 1px solid var(--border-color);
       border-radius: .25rem;
       box-sizing: border-box;
-      color: #33404d;
+      color: #cccccc;
+      background-color: rgb(136, 136, 136);
       line-height: inherit;
       font-size: 1rem;
       transition: border .3s, box-shadow .3s;
     }
 
     input:focus {
-      box-shadow: 0 0 0 .25rem var(--color-primary-alpha);
+      box-shadow: 0 0 0 .15rem var(--color-primary-alpha);
       border-color: var(--color-primary);
       outline: 0;
     }
 
+    input::-webkit-input-placeholder {
+      color: var(--border-color);
+    }
+
     details {
       margin: 1rem 0 2rem;
-      border: 1px solid var(--border-color);
+      border: 1px dashed var(--border-color);
       border-radius: .25rem;
       transition: background .3s;
     }
 
     details[open] {
-      background: #fff;
+      background: #444444;
+      box-shadow: 0 0 2px, 0 0 2px #fff;
     }
 
     details summary {
@@ -107,7 +113,7 @@
 
     details small {
       margin: 0;
-      font-size: .875rem;
+      font-size: .775rem;
       line-height: 2;
     }
 
@@ -128,7 +134,7 @@
       line-height: inherit;
       cursor: pointer;
       user-select: none;
-      transition: border .3s, background .3s, ;
+      transition: all .3s;
     }
 
     button:hover {
@@ -164,7 +170,7 @@
 
     footer {
       padding: 1rem;
-      border-top: 1px solid var(--border-color);
+      /* border-top: 1px solid var(--border-color); */
       text-align: center;
       opacity: .5;
     }
@@ -205,23 +211,21 @@
 
 <body>
   <header>
-    <h1>shorty</h1>
+    <h1>𝒮𝒽ℴ𝓇𝓉𝓎</h1>
   </header>
   <main x-data="app" x-cloak>
     <p x-show.transition.opacity="alert" :class="alert?.type" x-text="alert?.message"></p>
-    <input placeholder="Enter a URL to shorten..." x-model="url" x-ref="url" />
+    <input placeholder="请输入原链接..." x-model="url" x-ref="url" />
     <details>
-      <summary>Advanced settings</summary>
+      <summary>高级设置</summary>
       <div>
-        <input placeholder="Custom slug" x-model="slug" />
-        <small>Slug is a randomly generated short id by default.</small>
+        <input placeholder="自定义后缀（4~10位数字或英文字符）" x-model="slug" />
+        <!-- <small>默认情况下，Slug是随机生成的短id.</small> -->
       </div>
     </details>
-    <button :class="{ loading }" :disabled="loading || isValidated()"
-      @click="submit($refs, $nextTick)">Generate</button>
+    <button :class="{ loading }" :disabled="loading || isValidated()" @click="submit($refs, $nextTick)">生成短链</button>
   </main>
   <footer>
-    This <a href="https://t.zce.me">service</a> is hosted on <a href="https://vercel.com">Vercel</a><br />
     <a href="https://github.com/yesmore/shorty">&lt;/&gt;</a> with <i>&hearts;</i> by <a
       href="https://yesmore.cc">yesmore</a>
   </footer>
