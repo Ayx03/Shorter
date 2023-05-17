@@ -6,7 +6,7 @@ Short chain generator: a serverless service built on vercel
 
 - https://nb.js.cn/
 
-## Build on Vercel
+## Deploy with Vercel
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fzce%2Fshort&env=GITHUB_OWNER,GITHUB_REPO,GITHUB_ISSUE_ID,GITHUB_TOKEN&demo-url=https%3A%2F%2Ft.zce.me)
 
@@ -19,6 +19,7 @@ Short chain generator: a serverless service built on vercel
 - `GITHUB_TOKEN`: GitHub access_token with `repo` scope.
 
 > Tips. Using a closed & locked issue will be more reliable.
+> `REDIS_URL` isn't required if you use a GitHub issue as the database.
 
 ## Endpoints
 
